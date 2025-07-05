@@ -10,6 +10,7 @@ import ProductContext from '../components/ProductContext';
 import NearbyStores from '../components/NearbyStores';
 import SmartFilters from '../components/SmartFilters';
 import ResultsSummary from '../components/ResultsSummary';
+import TrendingFashionItems from '../components/TrendingFashionItems';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -37,21 +38,28 @@ const Index = () => {
       <Header />
       
       <main className="pt-20">
-        {/* Welcome Section - Simplified without search */}
-        <section className="py-20 px-4 text-center">
-          <div className="container mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Discover Fashion with AI
+        {/* Hero Section - Styled like the second image */}
+        <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20 px-4">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Discover Your Perfect Style
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Chat with our AI assistant to find the perfect style matches using text, images, or voice.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Explore our curated collection of fashion-forward pieces designed to elevate your wardrobe.
             </p>
-            <p className="text-lg text-gray-500">
-              Click the chat button to get started! →
-            </p>
+            <button
+              onClick={() => setIsChatOpen(true)}
+              className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+            >
+              Get AI Style Recommendations
+            </button>
           </div>
         </section>
+
+        {/* Trending Fashion Items - Always visible */}
+        <TrendingFashionItems />
         
+        {/* AI Results - Only show after query */}
         {isProcessing && <AIStatusBox />}
         
         {showResults && (
