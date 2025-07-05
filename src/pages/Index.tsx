@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import Header from '../components/Header';
-import HeroSection from '../components/HeroSection';
+import FloatingChatButton from '../components/FloatingChatButton';
+import ChatRoom from '../components/ChatRoom';
 import AIStatusBox from '../components/AIStatusBox';
 import DetectedObjects from '../components/DetectedObjects';
 import RecommendationsGrid from '../components/RecommendationsGrid';
@@ -16,6 +17,7 @@ const Index = () => {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const handleSearch = async (query: string, image?: string, voice?: boolean) => {
     setSearchQuery(query);
@@ -35,7 +37,20 @@ const Index = () => {
       <Header />
       
       <main className="pt-20">
-        <HeroSection onSearch={handleSearch} />
+        {/* Welcome Section - Simplified without search */}
+        <section className="py-20 px-4 text-center">
+          <div className="container mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Discover Fashion with AI
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Chat with our AI assistant to find the perfect style matches using text, images, or voice.
+            </p>
+            <p className="text-lg text-gray-500">
+              Click the chat button to get started! →
+            </p>
+          </div>
+        </section>
         
         {isProcessing && <AIStatusBox />}
         
@@ -66,6 +81,14 @@ const Index = () => {
       </main>
       
       <Footer />
+      
+      {/* Floating Chat Components */}
+      <FloatingChatButton onClick={() => setIsChatOpen(true)} />
+      <ChatRoom 
+        isOpen={isChatOpen} 
+        onClose={() => setIsChatOpen(false)}
+        onSearch={handleSearch}
+      />
     </div>
   );
 };
