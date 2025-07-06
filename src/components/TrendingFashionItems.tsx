@@ -69,10 +69,10 @@ const TrendingFashionItems = () => {
   ];
 
   return (
-    <section className="py-16 px-4 bg-white">
+    <section className="py-16 px-4 bg-gradient-to-br from-purple-50/50 via-white to-blue-50/50">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Trending Fashion Items
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ const TrendingFashionItems = () => {
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {trendingItems.map((item) => (
-            <div key={item.id} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+            <div key={item.id} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group hover:border-purple-200">
               <div className="relative overflow-hidden">
                 <img 
                   src={item.image} 
@@ -91,21 +91,21 @@ const TrendingFashionItems = () => {
                 />
                 <div className="absolute top-4 right-4">
                   <button className="p-2 bg-white/90 hover:bg-white rounded-full shadow-md transition-colors">
-                    <Heart className="w-4 h-4 text-gray-600 hover:text-red-500" />
+                    <Heart className="w-4 h-4 text-gray-600 hover:text-purple-500" />
                   </button>
                 </div>
                 <div className="absolute top-4 left-4 flex gap-2">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    item.category === 'Trending' ? 'bg-purple-600 text-white' :
-                    item.category === 'New Arrival' ? 'bg-green-600 text-white' :
-                    item.category === 'Popular' ? 'bg-blue-600 text-white' :
-                    item.category === 'Luxury' ? 'bg-gold-600 text-white' :
+                    item.category === 'Trending' ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white' :
+                    item.category === 'New Arrival' ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white' :
+                    item.category === 'Popular' ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white' :
+                    item.category === 'Luxury' ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white' :
                     'bg-gray-600 text-white'
                   }`}>
                     {item.category}
                   </span>
                   {item.isNew && (
-                    <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-medium">
                       New
                     </span>
                   )}
@@ -145,7 +145,7 @@ const TrendingFashionItems = () => {
                     )}
                   </div>
                   
-                  <button className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors flex items-center space-x-2 text-sm font-medium">
+                  <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-lg transition-all duration-300 flex items-center space-x-2 text-sm font-medium shadow-md hover:shadow-lg">
                     <ShoppingCart className="w-4 h-4" />
                     <span>Add to Cart</span>
                   </button>
@@ -156,7 +156,7 @@ const TrendingFashionItems = () => {
         </div>
         
         <div className="text-center mt-12">
-          <button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button className="bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
             View All Trending Items
           </button>
         </div>

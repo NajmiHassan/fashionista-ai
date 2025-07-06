@@ -12,26 +12,26 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Home</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Explore</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">My Style</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Help</a>
+            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">Home</a>
+            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">Explore</a>
+            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">My Style</a>
+            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">Help</a>
           </nav>
         </div>
         
         <div className="flex items-center space-x-4">
-          <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-            <Search className="w-5 h-5" />
+          <button className="p-2 hover:bg-purple-50 rounded-full transition-colors">
+            <Search className="w-5 h-5 text-gray-600 hover:text-purple-600" />
           </button>
-          <button className="p-2 hover:bg-gray-100 rounded-full transition-colors relative">
-            <ShoppingCart className="w-5 h-5" />
-            <span className="absolute -top-1 -right-1 bg-purple-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+          <button className="p-2 hover:bg-purple-50 rounded-full transition-colors relative">
+            <ShoppingCart className="w-5 h-5 text-gray-600 hover:text-purple-600" />
+            <span className="absolute -top-1 -right-1 bg-purple-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">3</span>
           </button>
-          <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-            <User className="w-5 h-5" />
+          <button className="p-2 hover:bg-purple-50 rounded-full transition-colors">
+            <User className="w-5 h-5 text-gray-600 hover:text-purple-600" />
           </button>
-          <button className="md:hidden p-2 hover:bg-gray-100 rounded-full transition-colors">
-            <Menu className="w-5 h-5" />
+          <button className="md:hidden p-2 hover:bg-purple-50 rounded-full transition-colors">
+            <Menu className="w-5 h-5 text-gray-600 hover:text-purple-600" />
           </button>
         </div>
       </div>
