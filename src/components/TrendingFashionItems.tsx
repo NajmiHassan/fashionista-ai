@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ShoppingCart, Heart, Star } from 'lucide-react';
 
@@ -41,7 +40,7 @@ const TrendingFashionItems = () => {
       price: 199.99,
       rating: 4.9,
       reviews: 145,
-      image: 'https://images.unsplash.com/photo-1583743089695-4b816a340f82?w=400&h=500&fit=crop',
+      image: '/lovable-uploads/b9bb10d5-4c78-48f1-8841-f5da994bd875.png',
       category: 'Luxury',
       isNew: false,
     },
