@@ -38,18 +38,18 @@ const Index = () => {
       <Header />
       
       <main className="pt-20">
-        {/* Hero Section - Styled like the second image */}
-        <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20 px-4">
+        {/* Hero Section - Purple gradient theme */}
+        <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Discover Your Perfect Style
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
               Explore our curated collection of fashion-forward pieces designed to elevate your wardrobe.
             </p>
             <button
               onClick={() => setIsChatOpen(true)}
-              className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+              className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Get AI Style Recommendations
             </button>
